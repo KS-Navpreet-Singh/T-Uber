@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:background="#80cbc4">
+                android:background="#2500ff">
 
                 <EditText
                     android:id="@+id/password"
