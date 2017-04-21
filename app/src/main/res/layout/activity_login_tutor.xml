@@ -20,7 +20,7 @@
         android:layout_height="80dp"
         android:layout_weight="0"
         android:text="Tutor"
-        android:textAlignment="viewStart"
+
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
