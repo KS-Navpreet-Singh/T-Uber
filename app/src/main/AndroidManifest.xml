@@ -23,7 +23,10 @@
         </activity>
         <activity
             android:name=".LoginTutor"
-            android:label="@string/title_activity_login_tutor"></activity>
+            android:label="@string/title_activity_login_tutor" />
+        <activity
+            android:name=".LoginStudent"
+            android:label="@string/title_activity_login_student"></activity>
     </application>
 
 </manifest>
