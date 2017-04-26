@@ -26,7 +26,11 @@
             android:label="@string/title_activity_login_tutor" />
         <activity
             android:name=".LoginStudent"
-            android:label="@string/title_activity_login_student"></activity>
+            android:label="@string/title_activity_login_student" />
+        <activity
+            android:name=".activity_student"
+            android:label="@string/title_activity_student"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
