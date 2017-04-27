@@ -7,13 +7,17 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
 
     public Button Tutor;
     public Button Student;
+    public TextView SignUp;
 
+
+    //Login Tutor page pull up
         public void tutor() {
             Tutor = (Button) findViewById(R.id.tutor);
             Tutor.setOnClickListener(new View.OnClickListener() {
@@ -29,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+
+//Login Student page pull up
     public void student() {
         Student = (Button) findViewById(R.id.student);
         Student.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +44,23 @@ public class MainActivity extends AppCompatActivity {
                 Intent login_Student = new Intent(MainActivity.this, LoginStudent.class);
 
                 startActivity(login_Student);
+
+            }
+        });
+
+    }
+
+
+//SignUp page pull up
+    public void signup() {
+        SignUp = (TextView) findViewById(R.id.signup);
+        SignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent login_SignUp = new Intent(MainActivity.this, SignUp.class);
+
+                startActivity(login_SignUp);
 
             }
         });
@@ -60,5 +83,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tutor();
         student();
+        signup();
     }
 }

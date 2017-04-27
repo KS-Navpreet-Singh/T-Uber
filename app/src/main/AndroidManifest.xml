@@ -28,6 +28,9 @@
             android:name=".LoginStudent"
             android:label="@string/title_activity_login_student" />
         <activity
+            android:name=".SignUp"
+            android:label="@string/title_activity_sign_up" />
+        <activity
             android:name=".activity_student"
             android:label="@string/title_activity_student"
             android:theme="@style/AppTheme"></activity>
