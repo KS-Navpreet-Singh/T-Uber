@@ -102,9 +102,24 @@ public class activity_student extends AppCompatActivity
 
         } else if (id == R.id.nav_slideshow) {
 
+            Toast.makeText(this, "Search By Course", Toast.LENGTH_SHORT).show();
+            searchBy_CourseFragment searchCourse= new searchBy_CourseFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_activity, searchCourse).commit();
+
         } else if (id == R.id.nav_manage) {
 
+            Toast.makeText(this, "Rating", Toast.LENGTH_SHORT).show();
+            Rating_Fragment rating = new Rating_Fragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_activity, rating).commit();
+
         } else if (id == R.id.nav_send) {
+
+            Toast.makeText(this, "Chat", Toast.LENGTH_SHORT).show();
+            chat_Student_Fragment chat = new chat_Student_Fragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_activity, chat).commit();
 
         }
 
