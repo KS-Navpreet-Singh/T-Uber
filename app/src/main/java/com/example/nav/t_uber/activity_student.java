@@ -93,10 +93,12 @@ public class activity_student extends AppCompatActivity
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_activity, profileFragment).commit();
 
-
-
-
         } else if (id == R.id.nav_gallery) {
+
+            Toast.makeText(this, "Search By Tutor", Toast.LENGTH_SHORT).show();
+            searchByTutorFragment searchTutor = new searchByTutorFragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_activity, searchTutor).commit();
 
         } else if (id == R.id.nav_slideshow) {
 
