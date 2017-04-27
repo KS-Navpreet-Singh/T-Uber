@@ -16,7 +16,7 @@
             android:title="Rating" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@android:drawable/divider_horizontal_bright"
+            android:icon="@android:drawable/ic_menu_view"
             android:title="MyProfile" />
     </group>
 
@@ -24,7 +24,7 @@
         <menu>
             <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@android:drawable/sym_action_chat"
                 android:title="Chat" />
         </menu>
     </item>
