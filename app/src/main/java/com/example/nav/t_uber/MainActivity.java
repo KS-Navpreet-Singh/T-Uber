@@ -12,8 +12,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public Button Tutor;
+    public Button Student;
 
-        public void init() {
+        public void tutor() {
             Tutor = (Button) findViewById(R.id.tutor);
             Tutor.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -28,6 +29,24 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+    public void student() {
+        Student = (Button) findViewById(R.id.student);
+        Student.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent login_Student = new Intent(MainActivity.this, LoginStudent.class);
+
+                startActivity(login_Student);
+
+            }
+        });
+
+    }
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         //--
 
         setContentView(R.layout.activity_main);
-        init();
+        tutor();
+        student();
     }
 }
