@@ -26,14 +26,6 @@ public class activity_student extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -43,7 +35,19 @@ public class activity_student extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_activity, new myProfileFragment()).commit();
+        }
+
     }
+
+
+//-------------------
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -88,6 +92,9 @@ public class activity_student extends AppCompatActivity
             myProfileFragment profileFragment = new myProfileFragment();
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_activity, profileFragment).commit();
+
+
+
 
         } else if (id == R.id.nav_gallery) {
 
