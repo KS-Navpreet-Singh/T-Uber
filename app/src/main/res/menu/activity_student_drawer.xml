@@ -3,21 +3,21 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="?android:attr/actionModeWebSearchDrawable"
-            android:title="Search by Tutor " />
+            android:id="@+id/my_Profile"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="My Profile " />
         <item
             android:id="@+id/nav_gallery"
             android:icon="?android:attr/actionModeWebSearchDrawable"
-            android:title="Search by Course" />
+            android:title="Search By Tutor" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@android:drawable/btn_star_big_off"
-            android:title="Rating" />
+            android:icon="?android:attr/actionModeWebSearchDrawable"
+            android:title="Search By Course " />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@android:drawable/ic_menu_view"
-            android:title="MyProfile" />
+            android:icon="@android:drawable/btn_star_big_off"
+            android:title="Rating" />
     </group>
 
     <item android:title="Communicate">
