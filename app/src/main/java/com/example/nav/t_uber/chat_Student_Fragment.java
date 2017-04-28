@@ -8,10 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class chat_Student_Fragment extends Fragment {
+
+
 
 
     public chat_Student_Fragment() {
