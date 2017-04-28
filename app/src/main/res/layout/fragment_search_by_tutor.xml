@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.nav.t_uber.searchByTutorFragment">
+    tools:context="com.example.nav.t_uber.searchByTutorFragment"
+
+    android:background="#006064">
 
 
     <android.support.constraint.ConstraintLayout
