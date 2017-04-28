@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
 
@@ -17,14 +18,15 @@ public class SignUp extends AppCompatActivity {
     public void tutor() {
         Tutor = (Button) findViewById(R.id.tutor_button);
         Tutor.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
                 Intent SignUp_Tutor = new Intent(SignUp.this, MainActivity.class);
 
                 startActivity(SignUp_Tutor);
-
             }
+
         });
 
     }

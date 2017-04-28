@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.nav.t_uber.searchBy_CourseFragment">
+    tools:context="com.example.nav.t_uber.searchBy_CourseFragment"
+
+    android:background="#006064">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -11,23 +13,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="371dp" android:layout_height="437dp"
+            android:layout_marginLeft="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="24dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintVertical_bias="0.914"
+            android:background="#eceff1">
+
+        </RelativeLayout>
+
+
         <AutoCompleteTextView
             android:id="@+id/SearchDepartment"
             android:layout_width="113dp"
             android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:backgroundTint="@android:color/holo_blue_bright"
             android:hint="Department"
             android:inputType="text"
             android:maxLines="1"
             android:singleLine="true"
-            android:layout_marginRight="16dp"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginLeft="16dp"
+            android:textColor="@android:color/white"
+            app:layout_constraintHorizontal_bias="0.046"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="48dp"
-            app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp" />
+            android:textColorHint="#eceff1"/>
 
         <AutoCompleteTextView
             android:id="@+id/SearchCourseNum"
@@ -38,29 +60,34 @@
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="48dp"
+            android:backgroundTint="@android:color/holo_blue_bright"
             android:hint="Course Number"
             android:inputType="text"
             android:maxLines="1"
             android:singleLine="true"
-            app:layout_constraintHorizontal_bias="0.577"
+            android:textColor="@android:color/white"
+            app:layout_constraintHorizontal_bias="0.568"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColorHint="#eceff1"/>
 
         <Button
             android:id="@+id/SearchButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="84dp"
+            android:layout_height="34dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="52dp"
             android:text="Search"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            app:layout_constraintLeft_toRightOf="@+id/SearchCourseNum" />
+            app:layout_constraintLeft_toRightOf="@+id/SearchCourseNum"
+            android:background="#039be5"
+            android:textColor="@android:color/white"/>
 
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>

@@ -192,7 +192,7 @@ public class LoginTutor extends AppCompatActivity implements LoaderCallbacks<Cur
 
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.contains("@");
+        return email.contains("@ku.edu");
     }
 
     private boolean isPasswordValid(String password) {
