@@ -38,7 +38,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="48dp"
-            android:hint="Course Numer"
+            android:hint="Course Number"
             android:inputType="text"
             android:maxLines="1"
             android:singleLine="true"
@@ -61,5 +61,6 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             app:layout_constraintLeft_toRightOf="@+id/SearchCourseNum" />
+
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>
