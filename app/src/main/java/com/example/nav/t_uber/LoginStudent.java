@@ -201,7 +201,7 @@ public class LoginStudent extends AppCompatActivity implements LoaderCallbacks<C
 
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
-        return email.contains("@");
+        return email.contains("@ku.edu");
     }
 
     private boolean isPasswordValid(String password) {
