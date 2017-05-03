@@ -3,6 +3,7 @@ package com.example.nav.t_uber;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.ProgressDialog;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -28,8 +29,10 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
@@ -38,6 +41,59 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class LoginTutor extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+
+
+    String finalResult;
+    String HttpURL = "https://people.eecs.ku.edu/~apodgorn/tuber/login_verify.php";
+    ProgressDialog progressDialog;
+    HashMap<String,String> hashMap = new HashMap<>();
+    HttpParse httpParse = new HttpParse();
+
+
+
+    public void Register(final String email, final String password){
+
+        class RegisterClass extends AsyncTask<String,Void,String> {
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+
+                progressDialog = ProgressDialog.show(LoginTutor.this,"Loading Data",null,true,true);
+            }
+
+            @Override
+            protected void onPostExecute(String httpResponseMsg) {
+
+                super.onPostExecute(httpResponseMsg);
+
+                progressDialog.dismiss();
+
+                Toast.makeText(LoginTutor.this,httpResponseMsg.toString(), Toast.LENGTH_LONG).show();
+
+
+            }
+
+            @Override
+            protected String doInBackground(String... params) {
+
+                hashMap.put("username",params[0]);
+
+                hashMap.put("password",params[1]);
+
+                finalResult = httpParse.postRequest(hashMap, HttpURL);
+
+                return finalResult;
+            }
+
+
+        }
+
+        RegisterClass Register = new RegisterClass();
+        Register.execute(email, password);
+
+    }
+
 
     /**
      * Id to identity READ_CONTACTS permission request.
