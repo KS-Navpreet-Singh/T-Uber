@@ -59,10 +59,14 @@ public class SignUp extends AppCompatActivity {
                 if(TextUtils.isEmpty(str_First_Name) || TextUtils.isEmpty(str_Last_Name) || TextUtils.isEmpty(str_Email) || TextUtils.isEmpty(str_Password1)
                         || TextUtils.isEmpty(str_Password2) ){
 
-                    Toast.makeText(SignUp.this, "Please fill all form fields.", Toast.LENGTH_LONG).show();
-                }else{
+                    Toast.makeText(SignUp.this, "Please fill all form fields.", Toast.LENGTH_SHORT).show();
+                }else if(str_Email.contains("@ku.edu")){
 
                     Register(str_First_Name, str_Last_Name, str_Email, str_Password1, str_Password2, status);
+
+                }else{
+
+                    Toast.makeText(SignUp.this, "Please Use KU Email!", Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -88,17 +92,22 @@ public class SignUp extends AppCompatActivity {
             if(TextUtils.isEmpty(str_First_Name) || TextUtils.isEmpty(str_Last_Name) || TextUtils.isEmpty(str_Email) || TextUtils.isEmpty(str_Password1)
                     || TextUtils.isEmpty(str_Password2) ){
 
-                Toast.makeText(SignUp.this, "Please fill all form fields.", Toast.LENGTH_LONG).show();
-            }else{
+                Toast.makeText(SignUp.this, "Please fill all form fields.", Toast.LENGTH_SHORT).show();
+            }else if(str_Email.contains("@ku.edu")){
 
                 Register(str_First_Name, str_Last_Name, str_Email, str_Password1, str_Password2, status);
+
+            }else{
+
+                Toast.makeText(SignUp.this, "Please Use KU Email!", Toast.LENGTH_SHORT).show();
 
             }
 
         }
-    });
+        });
 
-}
+
+    }
 
 
 
