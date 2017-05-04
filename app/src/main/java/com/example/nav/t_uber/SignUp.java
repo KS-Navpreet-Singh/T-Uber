@@ -1,6 +1,7 @@
 package com.example.nav.t_uber;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -132,6 +133,11 @@ public class SignUp extends AppCompatActivity {
 
                 Toast.makeText(SignUp.this,httpResponseMsg.toString(), Toast.LENGTH_LONG).show();
 
+                if(httpResponseMsg.toString().equals("Success")){
+                    Intent main = new Intent(SignUp.this, MainActivity.class);
+
+                    startActivity(main);
+                }
 
             }
 
