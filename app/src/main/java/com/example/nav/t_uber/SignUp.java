@@ -131,9 +131,9 @@ public class SignUp extends AppCompatActivity {
 
                 progressDialog.dismiss();
 
-                Toast.makeText(SignUp.this,httpResponseMsg.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(SignUp.this,httpResponseMsg, Toast.LENGTH_LONG).show();
 
-                if(httpResponseMsg.toString().equals("Success")){
+                if(httpResponseMsg.equals("Success")){
                     Intent main = new Intent(SignUp.this, MainActivity.class);
 
                     startActivity(main);
