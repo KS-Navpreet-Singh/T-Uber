@@ -64,7 +64,7 @@ public class LoginStudent extends AppCompatActivity{
 
                 }
 
-                Toast.makeText(LoginStudent.this,httpResponseMsg, Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginStudent.this,httpResponseMsg, Toast.LENGTH_SHORT).show();
 
 
             }
