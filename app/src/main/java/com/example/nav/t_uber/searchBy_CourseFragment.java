@@ -11,6 +11,15 @@ import java.util.HashMap;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.Toast;
+import java.util.ArrayList;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.util.Log;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -21,14 +30,6 @@ public class searchBy_CourseFragment extends Fragment {
     ProgressDialog progressDialog;
     HashMap<String,String> hashMap = new HashMap<>();
     HttpParse httpParse = new HttpParse();
-
-    public void Register(final String dept, final String num){
-
-    }
-
-    public searchBy_CourseFragment() {
-        // Required empty public constructor
-    }
 
 
     @Override
