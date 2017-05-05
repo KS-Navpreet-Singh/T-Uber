@@ -33,7 +33,7 @@ public class myProfileFragment extends Fragment {
 
 
 
-        ((TextView)v.findViewById(R.id.textView1)).setText("Email");
+        ((TextView)v.findViewById(R.id.textView6)).setText("UserEmail@ku.edu");
 
         return v;
     }
