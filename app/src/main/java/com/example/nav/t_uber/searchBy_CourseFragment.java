@@ -6,13 +6,25 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-
+import android.app.ProgressDialog;
+import java.util.HashMap;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.widget.Toast;
 /**
  * A simple {@link Fragment} subclass.
  */
 public class searchBy_CourseFragment extends Fragment {
 
+    String finalResult;
+    String HttpURL = "https://people.eecs.ku.edu/~apodgorn/tuber/find_tutor.php";
+    ProgressDialog progressDialog;
+    HashMap<String,String> hashMap = new HashMap<>();
+    HttpParse httpParse = new HttpParse();
+
+    public void Register(final String dept, final String num){
+
+    }
 
     public searchBy_CourseFragment() {
         // Required empty public constructor
