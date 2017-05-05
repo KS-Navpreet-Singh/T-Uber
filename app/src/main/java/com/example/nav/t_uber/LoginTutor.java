@@ -23,9 +23,6 @@ import java.util.HashMap;
  */
 public class LoginTutor extends AppCompatActivity{
 
-    EditText Email, Password;
-    Button Sign_In;
-    String str_Email, str_Password;
     String finalResult;
     String HttpURL = "https://people.eecs.ku.edu/~apodgorn/tuber/login_verify_tutors.php";
     ProgressDialog progressDialog;
@@ -60,7 +57,7 @@ public class LoginTutor extends AppCompatActivity{
 
                     Intent intent = new Intent(LoginTutor.this, activity_student.class);
 
-                    intent.putExtra(Student_Email,email);
+                    //intent.putExtra(Student_Email,email);
 
                     startActivity(intent);
 
