@@ -55,9 +55,9 @@ public class LoginTutor extends AppCompatActivity{
 
                     finish();
 
-                    Intent intent = new Intent(LoginTutor.this, activity_student.class);
+                    Intent intent = new Intent(LoginTutor.this, my_tutor_profile.class);
 
-                    //intent.putExtra(Student_Email,email);
+                    intent.putExtra(Student_Email,email);
 
                     startActivity(intent);
 
