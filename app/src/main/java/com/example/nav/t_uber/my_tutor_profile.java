@@ -93,6 +93,11 @@ public class my_tutor_profile extends AppCompatActivity
 
         } else if (id == R.id.requests) {
 
+            Toast.makeText(this, "Student Requests", Toast.LENGTH_SHORT).show();
+            Tutor_Requests_Fragment tutor_requests_fragment = new Tutor_Requests_Fragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_my_tutor, tutor_requests_fragment).commit();
+
         } else if (id == R.id.T_ratting) {
 
         } else if (id == R.id.T_chat) {
