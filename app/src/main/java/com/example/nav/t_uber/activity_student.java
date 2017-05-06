@@ -1,8 +1,6 @@
 package com.example.nav.t_uber;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
 import android.view.View;
@@ -36,6 +34,7 @@ public class activity_student extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        // to replace with fragment
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content_activity, new myProfileFragment()).commit();
         }

@@ -1,9 +1,8 @@
 package com.example.nav.t_uber;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class my_tutor_profile extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +32,11 @@ public class my_tutor_profile extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+      // to replace with fragment
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_my_tutor, new Tutor_my_profile_fragment()).commit();
+        }
     }
 
     //-------------------
@@ -79,7 +84,13 @@ public class my_tutor_profile extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.T_myProfile) {
-            // Handle the camera action
+
+            Toast.makeText(this, "My Profile", Toast.LENGTH_SHORT).show();
+            Tutor_my_profile_fragment tutor_my_profile_fragment = new Tutor_my_profile_fragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_my_tutor, tutor_my_profile_fragment).commit();
+
+
         } else if (id == R.id.requests) {
 
         } else if (id == R.id.T_ratting) {
