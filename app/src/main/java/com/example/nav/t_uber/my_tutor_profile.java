@@ -98,9 +98,13 @@ public class my_tutor_profile extends AppCompatActivity
             FragmentManager manager = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.content_my_tutor, tutor_requests_fragment).commit();
 
-        } else if (id == R.id.T_ratting) {
 
         } else if (id == R.id.T_chat) {
+
+            Toast.makeText(this, "Chat", Toast.LENGTH_SHORT).show();
+            Tutor_Chat_Fragment tutor_chat_fragment= new Tutor_Chat_Fragment();
+            FragmentManager manager = getSupportFragmentManager();
+            manager.beginTransaction().replace(R.id.content_my_tutor, tutor_chat_fragment).commit();
 
         }
 
